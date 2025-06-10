@@ -1,5 +1,5 @@
-import javax.swing.*;           
-import java.awt.*;              
+import java.awt.*;
+import javax.swing.*;              
 
 public class CadastroPessoa extends JFrame {
 
@@ -154,9 +154,9 @@ public class CadastroPessoa extends JFrame {
         JLabel lblValorPais = new JLabel("BRASIL");
         lblValorPais.setBounds(190, 210, 290, 30);
         lblValorPais.setOpaque(true);
-        lblValorPais.setBackground(new Color(201, 201, 201));
+        lblValorPais.setBackground(new Color(231, 231, 231));
         lblValorPais.setBorder(BorderFactory.createLineBorder(Color.GRAY));
-        lblValorPais.setHorizontalAlignment(SwingConstants.CENTER);
+        lblValorPais.setHorizontalAlignment(SwingConstants.LEFT);
         lblValorPais.setFont(fontePadrao);
         add(lblValorPais);
 
@@ -178,7 +178,7 @@ public class CadastroPessoa extends JFrame {
         txtComp = new JTextField();
         txtComp.setBounds(720, 210, 250, 30);
         txtComp.setFont(fontePadrao);
-        txtComp.setBackground(new Color(201, 201, 201));
+        txtComp.setBackground(new Color(231, 231, 231));
         add(txtComp);
 
         // Município
@@ -193,7 +193,7 @@ public class CadastroPessoa extends JFrame {
         txtMunicipio = new JTextField();
         txtMunicipio.setBounds(190, 245, 780, 30);
         txtMunicipio.setFont(fontePadrao);
-        txtMunicipio.setBackground(new Color(201, 201, 201));
+        txtMunicipio.setBackground(new Color(231, 231, 231));
         add(txtMunicipio);
 
         // Logradouro
@@ -348,7 +348,7 @@ public class CadastroPessoa extends JFrame {
         // Botão Limpar
         JButton btnLimpar = new JButton("Limpar");
         btnLimpar.setBounds(300, 400, 120, 30);
-        btnLimpar.setBackground(new Color(201, 201, 201));
+        btnLimpar.setBackground(new Color(231, 231, 231));
         btnLimpar.setForeground(Color.BLACK);
         btnLimpar.setFont(fontePadrao);
          btnLimpar.addActionListener(e -> {
