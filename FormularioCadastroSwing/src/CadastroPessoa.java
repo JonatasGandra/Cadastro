@@ -37,6 +37,8 @@ public class CadastroPessoa extends JFrame {
         lblTipo.setBounds(40, 70, 140, 30);
         lblTipo.setHorizontalAlignment(SwingConstants.CENTER);
         lblTipo.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblTipo.setOpaque(true);
+        lblTipo.setBackground(Color.WHITE);
         lblTipo.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblTipo);
 
@@ -79,6 +81,8 @@ public class CadastroPessoa extends JFrame {
         lblNome.setBounds(40, 105, 140, 30);
         lblNome.setHorizontalAlignment(SwingConstants.CENTER);
         lblNome.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblNome.setOpaque(true);
+        lblNome.setBackground(Color.WHITE);
         lblNome.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblNome);
 
@@ -93,6 +97,8 @@ public class CadastroPessoa extends JFrame {
         lblRg.setBounds(40, 140, 140, 30);
         lblRg.setHorizontalAlignment(SwingConstants.CENTER);
         lblRg.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblRg.setOpaque(true);
+        lblRg.setBackground(Color.WHITE);
         lblRg.setFont(new Font("Arial", Font.BOLD, 12));
         add(lblRg);
 
@@ -120,6 +126,8 @@ public class CadastroPessoa extends JFrame {
         lblEmail.setBounds(40, 175, 140, 30);
         lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
         lblEmail.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblEmail.setOpaque(true);
+        lblEmail.setBackground(Color.WHITE);
         lblEmail.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblEmail);
 
@@ -147,6 +155,8 @@ public class CadastroPessoa extends JFrame {
         lblPais.setBounds(40, 210, 140, 30);
         lblPais.setHorizontalAlignment(SwingConstants.CENTER);
         lblPais.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblPais.setOpaque(true);
+        lblPais.setBackground(Color.WHITE);
         lblPais.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblPais);
 
@@ -186,6 +196,8 @@ public class CadastroPessoa extends JFrame {
         lblMunicipio.setBounds(40, 245, 140, 30);
         lblMunicipio.setHorizontalAlignment(SwingConstants.CENTER);
         lblMunicipio.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblMunicipio.setOpaque(true);
+        lblMunicipio.setBackground(Color.WHITE);
         lblMunicipio.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblMunicipio);
 
@@ -201,6 +213,8 @@ public class CadastroPessoa extends JFrame {
         lblLogradouro.setBounds(40, 280, 140, 30);
         lblLogradouro.setHorizontalAlignment(SwingConstants.CENTER);
         lblLogradouro.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblLogradouro.setOpaque(true);
+        lblLogradouro.setBackground(Color.WHITE);
         lblLogradouro.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblLogradouro);
 
@@ -215,6 +229,8 @@ public class CadastroPessoa extends JFrame {
         lblNumero.setBounds(40, 315, 140, 30);
         lblNumero.setHorizontalAlignment(SwingConstants.CENTER);
         lblNumero.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblNumero.setOpaque(true);
+        lblNumero.setBackground(Color.WHITE);
         lblNumero.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblNumero);
 
@@ -242,6 +258,8 @@ public class CadastroPessoa extends JFrame {
         lblBairro.setBounds(40, 350, 140, 30);
         lblBairro.setHorizontalAlignment(SwingConstants.CENTER);
         lblBairro.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        lblBairro.setOpaque(true);
+        lblBairro.setBackground(Color.WHITE);
         lblBairro.setFont(new Font("Arial", Font.BOLD, 14));
         add(lblBairro);
 
@@ -286,6 +304,10 @@ public class CadastroPessoa extends JFrame {
         radioInativo.setBackground(Color.WHITE);
         add(radioInativo);
 
+        grupoSituacao = new ButtonGroup();
+        grupoSituacao.add(radioAtivo);
+        grupoSituacao.add(radioInativo);
+
         // Botão Confirmar
         JButton btnConfirmar = new JButton("Confirmar");
         btnConfirmar.setBounds(40, 400, 120, 30);
@@ -325,10 +347,10 @@ public class CadastroPessoa extends JFrame {
         btnExcluir.addActionListener(e -> {
 
             // Limpa todos os campos 
-            txtCpf.setText("");
-            txtNome.setText("");
-            txtRg.setText("");
-            txtOrgao.setText("");
+            txtCpf.setText(null);
+            txtNome.setText(null);
+            txtRg.setText(null);
+            txtOrgao.setText(null);
             txtEmail.setText("");
             txtCep.setText("");
             txtUf.setText("");
@@ -351,7 +373,7 @@ public class CadastroPessoa extends JFrame {
         btnLimpar.setBackground(new Color(231, 231, 231));
         btnLimpar.setForeground(Color.BLACK);
         btnLimpar.setFont(fontePadrao);
-         btnLimpar.addActionListener(e -> {
+        btnLimpar.addActionListener(e -> {
 
             // Limpa todos os campos 
             txtCpf.setText("");
